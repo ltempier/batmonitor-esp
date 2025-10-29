@@ -1,15 +1,14 @@
 # Batmonitor: 3S Battery Monitor with ESP32 + INA3221 + MicroPython
 
 
-## Install
+## 🚀 Install
 1. **Clone the project**
 2. **Install MicroPython firmware** on ESP32
-
-3. **Copy ./www and ./srv/*** to ESP32
+3. Copy **./www** and **./srv/*** to ESP32
     - Copy the entire **./www** folder to the **root** of the ESP32.
     - Copy all files from **./srv/** to the **root** of the ESP32.
-4. Edit **.env** file on the ESP32 (check .env.example)
-5. Reset ESP32
+4. **Edit .env** file on the ESP32 (check .env.example)
+5. **Reset ESP32**
 6. [Open Webapp](#accessing-the-interface)
 
 ## 🎯 Project Goals
@@ -25,16 +24,16 @@
 |----------------|-------------|
 | **Continuous measurement** | Voltage of each cell (**V1, V2, V3**) + global current via **INA3221**<br>(Configurable frequency from **1 Hz to 10 Hz**) |
 | **Data history** | Storage in `DataHist` with **aggregation** (average, Wh, ...) |
-| **Access Point mode** | On **first boot** or **no Wi-Fi configured**, the ESP32 creates an access point:<br>` - SSID: ESP32_Access_Point`<br>` - Password: 12345678`<br>Access the interface via **`http://192.168.4.1`** |
-| **Built-in web server** | Modern user interface + **API** |
+| **Access Point mode** | On **first boot** or **no Wi-Fi configured**, the ESP32 creates an access point:<br>` -SSID: ESP32_Access_Point`<br>` -Password: 12345678`<br>Access the interface via **`http://192.168.4.1`** |
+| **Built-in web server** | Modern user interface + **HTTP API** |
 | **CSV export** | download of historical data |
+
 ## 🛠 Required Hardware
 - **Microcontroller**: ESP32 (DevKit, NodeMCU, etc.) – the more memory the better.
-- **Current/voltage sensor**: [INA3221](https://www.ti.com/product/INA3221) (3 channels)
+- **Current/voltage sensor**: INA3221 (3 channels)
 - **Battery**: 3S BMS + 3×18650
 - **5V power supply** for the ESP32
 - **Battery charger** (various chargers to test)
-
 
 ## 📐 Electrical Schematics
 ### **Version v0** – Battery monitoring only
