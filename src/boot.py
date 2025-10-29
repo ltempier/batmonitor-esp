@@ -1,5 +1,3 @@
-print("------ boot.py ------")
-
 import ntptime
 import time
 

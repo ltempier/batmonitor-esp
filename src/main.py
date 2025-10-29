@@ -1,5 +1,3 @@
-print("------ main.py ------")
-
 from microdot import Microdot, Response, send_file
 import time
 import json
